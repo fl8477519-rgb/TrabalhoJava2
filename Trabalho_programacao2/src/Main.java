@@ -13,11 +13,15 @@ public class Main {
         Scanner leia =new Scanner(System.in);
         int opcao=1;
         do {
+            try {
+
+
             System.out.println("--------Sistema de Roupas---------");
             System.out.println("1-Cadastar cliente (create");
             System.out.println("2-Listar Cliente (read)");
             System.out.println("3-Atualizar cliente(update)");
             System.out.println("4-Deletar Cliente (Delete)");
+
             System.out.println("5-Cadastrar  Produto(create)");
             System.out.println("6-Listar Produtos (read)");
             System.out.println("7-Atualizar Produto (update)");
@@ -25,6 +29,9 @@ public class Main {
             System.out.println("0 para sair");
             System.out.println("Escolha  uma opção :");
             opcao=leia.nextInt();
+        }catch (Exception erro){
+                System.out.println("Erro digite uma das opções acima");
+            }
 
 
             switch (opcao){
