@@ -9,6 +9,6 @@ public class Venda {
     private Cliente cliente;
     private Loja loja;
     private Venda venda;
-    private Locale locale
+    private Locale locale;
 
 }
