@@ -1,3 +1,5 @@
+package produto;
+
 public class Produto {
     private  int id ;
     private String nome;
@@ -11,6 +13,9 @@ public class Produto {
         this.categoria=categoria;
         this.tamanho=tamanho;
         this.preco=preco;
+    }
+
+    public static void add(Produto produto) {
     }
 
 

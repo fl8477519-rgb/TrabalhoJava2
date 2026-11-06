@@ -1,3 +1,6 @@
+import pessoa.Cliente;
+import produto.Produto;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -14,18 +17,16 @@ public class Main {
         int opcao=1;
         do {
             try {
-
-
             System.out.println("--------Sistema de Roupas---------");
             System.out.println("1-Cadastar cliente (create");
-            System.out.println("2-Listar Cliente (read)");
+            System.out.println("2-Listar pessoa.Cliente (read)");
             System.out.println("3-Atualizar cliente(update)");
-            System.out.println("4-Deletar Cliente (Delete)");
+            System.out.println("4-Deletar pessoa.Cliente (Delete)");
 
-            System.out.println("5-Cadastrar  Produto(create)");
+            System.out.println("5-Cadastrar  produto.Produto(create)");
             System.out.println("6-Listar Produtos (read)");
-            System.out.println("7-Atualizar Produto (update)");
-            System.out.println("8-Deletar Produto(Delete)");
+            System.out.println("7-Atualizar produto.Produto (update)");
+            System.out.println("8-Deletar produto.Produto(Delete)");
             System.out.println("0 para sair");
             System.out.println("Escolha  uma opção :");
             opcao=leia.nextInt();
@@ -43,7 +44,7 @@ public class Main {
                     System.out.println("Telefone:");
                     String telefone =leia.nextLine();
                     clientes.add(new Cliente(clienteIdContador++, nome, cpf, telefone));
-                    System.out.println("Cliente cadastrado com Sucesso");
+                    System.out.println("pessoa.Cliente cadastrado com Sucesso");
                     break;
                 case 2 :
                     System.out.println("--------LIsta de Clientes ----------");

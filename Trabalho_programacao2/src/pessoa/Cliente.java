@@ -1,3 +1,5 @@
+package pessoa;
+
 public class Cliente {
     private int id ;
     private String nome ;
@@ -24,6 +26,7 @@ public class Cliente {
         this.nome=nome;
     }
     public String getCpf(){
+
         return  cpf;
     }
     public  void  setCpf(String cpf){
