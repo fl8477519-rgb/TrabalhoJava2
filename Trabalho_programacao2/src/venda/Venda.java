@@ -8,7 +8,9 @@ import java.util.Locale;
 public class Venda {
     private Cliente cliente;
     private Loja loja;
-    private Venda venda;
-    private Locale locale;
 
+    public Venda(Cliente cliente, Loja loja) {
+        this.cliente = cliente;
+        this.loja = loja;
+    }
 }

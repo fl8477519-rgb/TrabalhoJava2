@@ -16,6 +16,7 @@ public class Produto {
     }
 
     public static void add(Produto produto) {
+
     }
 
 
@@ -59,4 +60,5 @@ public class Produto {
     public String toString(){
         return "Id:"+id+"Nome:"+nome+"Categoria:"+categoria+"Tamanho"+tamanho+"Preço:"+preco+"Quantidade de Estoque:"+quantidadeEstoque;
     }
+
 }

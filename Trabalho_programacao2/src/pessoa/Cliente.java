@@ -40,7 +40,7 @@ public class Cliente {
     }
     @Override
     public  String toString(){
-        return  "ID:"+id+ "Nome:"+"Cpf:"+"Telefone :"+telefone;
+        return  "ID:"+id+ "Nome:"+nome+"Cpf:"+cpf+"Telefone :"+telefone;
 
     }
 }
