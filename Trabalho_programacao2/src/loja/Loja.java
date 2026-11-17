@@ -5,20 +5,32 @@ import produto.Produto;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class Loja {
+    private  int id ;
     private  String nome;
     private  String endereco;
     private List<Produto>produtos;
-    public  Loja(String nome,String endereco){
+    public  Loja(int id,String nome,String endereco){
+       this.id=id;
         this.nome=nome;
         this.endereco=endereco;
         this.produtos=new ArrayList<>();
 
     }
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getNome() {
         return nome;
     }
+
+
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -40,7 +52,7 @@ public class Loja {
         this.produtos = produtos;
     }
     public  void adicionarProduto(Produto produto){
-        Produto.add(produto);
+        produtos.add(produto);
 
     }
     public void listarProdutos(){
@@ -56,9 +68,11 @@ public class Loja {
     @Override
     public String toString() {
         return "Loja{" +
-                "nome='" + nome + '\'' +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
                 ", endereco='" + endereco + '\'' +
                 ", produtos=" + produtos +
                 '}';
     }
 }
+

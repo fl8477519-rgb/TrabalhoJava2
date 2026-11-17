@@ -32,7 +32,6 @@ public class MenuPrincipal {
 
             switch (opcaoPrincipal){
                 case 1 :
-
                     menuClientes();
                     break;
                 case 2 :
@@ -41,6 +40,11 @@ public class MenuPrincipal {
                 case  3 :
                     menuVendas();
                     break;
+                case 4:
+                    System.out.println("Saindo.......");
+                    break;
+                default:
+                    System.out.println("Opção Invalida ...");
 
             }
 
@@ -63,7 +67,7 @@ public class MenuPrincipal {
             System.out.println("1-Registrar Vendas");
             System.out.println("2-Listar Vendas");
             System.out.println("3-Voltar ao Menu Principal");
-            System.out.println("4-Escolha uma opção :");
+            System.out.println("Escolha uma opção :");
 
             try {
                 opcao = sc.nextInt();
@@ -75,15 +79,18 @@ public class MenuPrincipal {
                             System.out.println("[Aviso] você precisa cadastrar pelo menos um cliente e um Produto antes de vender!");
                             break;
                         }
+
                         System.out.println("Id Venda :");
                         int idVenda = sc.nextInt();
+                        sc.nextLine();
                         System.out.println("Id do comprador :");
-                        int idCliente = sc.nextInt();
+                        int idCliete = sc.nextInt();
+                        sc.nextLine();
 
                         Cliente clienteEncontrado = null;
                         for (Cliente c : clientes) {
-                            if (c.getId() == idCliente) {
-                                clienteEncontrado = c;
+                            if (c.getId() == idCliete) {
+                                clienteEncontrado= c;
                                 break;
                             }
                         }
@@ -92,7 +99,22 @@ public class MenuPrincipal {
                             break;
                         }
                         System.out.println("Id do Produto :");
-                        int idProduto= sc.nextInt();
+                        int idProduto = sc.nextInt();
+                        sc.nextLine();
+                        Produto produtoEncontrado =null;
+                        for (Produto p :produtos){
+                            if (p.getId()==idProduto){
+                                produtoEncontrado =p;
+                                break;
+                            }
+                        }
+                        if (produtoEncontrado ==null){
+                            System.out.println("[Erro] Produto não Encontrado");
+                            break;
+                        }
+                        vendas.add(new Venda(idVenda,clienteEncontrado,produtoEncontrado));
+                        System.out.println();
+                        break;
                     case 2 :
                         System.out.println("---------Lista de Vendas--------");
                         if (vendas.isEmpty()){
@@ -119,7 +141,7 @@ public class MenuPrincipal {
                 }catch (Exception erro) {
                 System.out.println("Erro: Entrada inválida! Digite apenas números inteiros.");
             }
-            sc.nextLine();
+
             } while (opcao != 3) ;
 
 
@@ -132,9 +154,9 @@ public class MenuPrincipal {
             System.out.println("=-------SUBMENU Produto-------");
             System.out.println("1-Cadastar Produtos  ");
             System.out.println("2 -Listar Produtos");
-            System.out.println("4 -Excluir Produtos ");
-            System.out.println("5- Voltar ao menu Principal");
-            System.out.println("6-saindo.......");
+            System.out.println("3 -Excluir Produtos ");
+            System.out.println("4- Voltar ao menu Principal");
+            System.out.println("5-saindo.......");
             try {
                 opcao1 =sc.nextInt();
 
